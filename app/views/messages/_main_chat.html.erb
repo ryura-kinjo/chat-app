@@ -1,0 +1,27 @@
+<div class="chat-header">
+  <div class="room-name">hogehoge</div>
+  <%= link_to "チャットを終了する", "#", class: "finish-chat-btn" %>
+</div>
+<div class="chat-main">  
+  <% 10.times do |index| %>
+  <div class="message-container">
+    <div class="message-container-top">
+      <div class="message-user-name">Tom</div>
+      <div class="message-date">2022/3/10(Wed) 12:33:33</div>
+    </div>
+    <div class="message-message">おはよう</div>
+  </div>
+  <% end %>
+</div>
+<div class="chat-form">
+  <form action="">
+    <div class="input-form">
+      <input type="text" placeholder="type a message" class="input-message">
+      <label class="form-image">
+        <span class="image-file">画像</span>
+        <input type="file" class="hidden">
+      </label>
+    </div>
+    <input type="submit" value="送信" class="submit-btn">
+  </form>
+</div>

@@ -1,0 +1,9 @@
+<div class="side-bar-header">
+  <div class="user-name">Tom</div>
+  <%= link_to "チャットを作成する", "#", class: "create-room-btn" %>
+</div>
+<div class="side-bar-main">
+  <% 10.times do |index| %>
+    <%= link_to "testroom#{index}", "#", class: "open-room-btn" %>
+  <% end %>
+</div>
