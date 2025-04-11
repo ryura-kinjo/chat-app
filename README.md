@@ -50,3 +50,6 @@
 
 - belongs_to :room
 - belongs_to :user
+
+# メモ
+⑤-1 投稿フォームを表示しようの最初から続きを始める
