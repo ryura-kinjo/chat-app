@@ -3,6 +3,6 @@
     <%= render partial: "messages/side_bar" , locals: { rooms: @rooms} %>
   </div>
   <div class="chat-container">
-    <%= render partial: "messages/main_chat", locals: { count: 0 , current_room: @current_room, message: @message} %>
+    <%= render partial: "messages/main_chat", locals: {current_room: @current_room, message: @message} %>
   </div>
 </div>

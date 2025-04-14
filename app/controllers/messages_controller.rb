@@ -2,15 +2,21 @@ class MessagesController < ApplicationController
   def index
     @rooms = current_user.rooms
     @current_room = Room.find_by(id: params[:room_id])
+    @messages = @current_room.messages.includes(:user)
     @message = Message.new
+    # binding.pry
   end
 
   def create
-    room = Room.find(params[:user_id])
-    message = room.message.new(message_params)
+    room = Room.find(params[:room_id])
+    message = room.messages.new(message_params)
+    
+    binding.pry
+    # binding.pry
     if message.save
       redirect_to room_messages_path(room)
     else
+      @messages = @room.messages.includes(:user)
       render :index, status: :unprocessable_entity
     end
   end
