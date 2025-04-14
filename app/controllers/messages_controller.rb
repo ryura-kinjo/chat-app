@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
   def index
-    # @message = Message
+    @rooms = current_user.rooms
   end
 end
