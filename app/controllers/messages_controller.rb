@@ -14,7 +14,10 @@ class MessagesController < ApplicationController
     if message.save
       redirect_to room_messages_path(room)
     else
-      @messages = @room.messages.includes(:user)
+      @messages = room.messages.includes(:user)
+      @message = Message.new
+      @rooms = current_user.rooms
+      @current_room = Room.find_by(id: params[:room_id])
       render :index, status: :unprocessable_entity
     end
   end
