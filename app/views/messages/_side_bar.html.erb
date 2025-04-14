@@ -3,7 +3,7 @@
   <%= link_to "チャットを作成する", new_room_path, class: "create-room-btn" %>
 </div>
 <div class="side-bar-main">
-  <% @rooms.each do |room| %>
+  <% rooms.each do |room| %>
     <%= link_to "testroom#{room.name}", "#", class: "open-room-btn" %>
   <% end %>
 </div>
