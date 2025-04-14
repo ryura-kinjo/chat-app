@@ -4,6 +4,6 @@
 </div>
 <div class="side-bar-main">
   <% rooms.each do |room| %>
-    <%= link_to "testroom#{room.name}", "#", class: "open-room-btn" %>
+    <%= link_to room.name, room_messages_path(room.id), class: "open-room-btn" %>
   <% end %>
 </div>
