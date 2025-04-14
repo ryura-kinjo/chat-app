@@ -3,7 +3,5 @@
     <%= render partial: "messages/side_bar" , locals: { rooms: @rooms} %>
   </div>
   <div class="chat-container">
-    <% current_room = Room.new(name: "test_room")%>
-    <%= render partial: "messages/main_chat", locals: { count: 0 , current_room: current_room} %>
   </div>
 </div>

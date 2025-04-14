@@ -1,9 +1,9 @@
 <div class="side-bar-header">
   <%= link_to current_user.name, edit_user_path(current_user), class: "user-name" %>
-  <%= link_to "チャットを作成する", "#", class: "create-room-btn" %>
+  <%= link_to "チャットを作成する", new_room_path, class: "create-room-btn" %>
 </div>
 <div class="side-bar-main">
-  <% 10.times do |index| %>
-    <%= link_to "testroom#{index}", "#", class: "open-room-btn" %>
+  <% rooms.each do |room| %>
+    <%= link_to "testroom#{room.name}", "#", class: "open-room-btn" %>
   <% end %>
 </div>

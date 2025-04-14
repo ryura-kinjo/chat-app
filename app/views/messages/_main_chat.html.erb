@@ -1,9 +1,10 @@
 <div class="chat-header">
-  <div class="room-name">hogehoge</div>
+  <% room_name = current_room&.name || ""%>
+  <div class="room-name"><%= room_name %></div>
   <%= link_to "チャットを終了する", "#", class: "finish-chat-btn" %>
 </div>
 <div class="chat-main">  
-  <% 10.times do |index| %>
+  <% count.times do |index| %>
   <div class="message-container">
     <div class="message-container-top">
       <div class="message-user-name">Tom</div>
